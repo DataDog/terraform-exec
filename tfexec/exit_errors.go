@@ -192,7 +192,7 @@ type ErrConfigInvalid struct {
 }
 
 func (e *ErrConfigInvalid) Error() string {
-	return "configuration is invalid"
+	return fmt.Sprintf("configuration is invalid:\n%s", e.stderr)
 }
 
 type ErrMissingVar struct {
